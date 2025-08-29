@@ -1,3 +1,8 @@
+![alt text](photo_2025-08-29_10-54-28.jpg)
+- bullmq for queues (works with redis)
+- multer for file uploads
+- clerk for authentication
+
 **`multipart/form-data`** is a special way of encoding data when submitting forms that include **files** (images, PDFs, videos, etc.) or large binary data.
 
 Normally:
