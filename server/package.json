@@ -13,6 +13,7 @@
   "type": "module",
   "dependencies": {
     "@types/cors": "^2.8.19",
+    "bullmq": "^5.58.4",
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "multer": "^2.0.2"

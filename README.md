@@ -1,8 +1,36 @@
 ![alt text](photo_2025-08-29_10-54-28.jpg)
-- bullmq for queues (works with redis)
+- bullmq for queues (along with valkey instead of redis)
 - multer for file uploads
 - clerk for authentication
 
+---
+## Valkey 
+- open src key value store server
+### uses
+- caching (storing frequently accessed data)
+- session mgmt (Storing user sessions avoiding db calls)
+- realtime analytics(batch write events insteading of writing each event in db)
+- message queue (with pub/sub mechanism for background job processing with real time notifications)
+
+## Redis/Valkey vs BullMQ
+
+* **Redis / Valkey** → **In-memory data stores** (key-value databases).
+
+  * General-purpose: caching, pub/sub, sessions, real-time data.
+  * Not a queueing system by itself, but can be used as a backend for one.
+
+* **BullMQ** → **Job/queue library built on top of Redis**.
+
+  * Lets you create **task queues** in Node.js.
+  * Provides retries, scheduling, rate limiting, and worker management.
+  * Needs Redis (or Valkey) underneath to store and coordinate jobs.
+
+👉 In short:
+**Redis/Valkey = the engine (database).**
+**BullMQ = a queue manager that runs *on top of* Redis/Valkey.**
+Would you like me to also show you **when to use BullMQ vs just plain Redis pub/sub**?
+
+---
 **`multipart/form-data`** is a special way of encoding data when submitting forms that include **files** (images, PDFs, videos, etc.) or large binary data.
 
 Normally:
