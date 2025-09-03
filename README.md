@@ -1,3 +1,10 @@
+## Steps followed
+- Created the frontend to upload a file
+- Created the backend to recieve and upload the file to our server using multer
+- Once the file is recieved, add to a queue (using bullMQ with Valkey (instead of Redis))
+- created a worker service which takes the file from the queue
+
+
 ![alt text](photo_2025-08-29_10-54-28.jpg)
 - bullmq for queues (along with valkey instead of redis)
 - multer for file uploads
